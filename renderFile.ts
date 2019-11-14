@@ -27,4 +27,4 @@ const writeTemplate = (templatePath: string, params: TemplateParam) => {
   console.log(testStr);
 };
 
-export default renderFile;
+export default renderTemplate;
