@@ -1,10 +1,11 @@
 {
   "name": "leetcode-cli",
-  "version": "0.0.0",
-  "description": "",
-  "main": "src/index.js",
+  "version": "1.0.0",
+  "description": "LeetCode initializer for coding enthusiasts",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -25,10 +26,11 @@
   },
   "funding": {
     "type": "patreon",
-    "url": "https://www.patreon.com/user?u=26669499"
+    "url": "https://www.patreon.com/yukisato"
   },
   "devDependencies": {
     "@types/cheerio": "^0.22.14",
-    "@types/node": "^12.12.7"
+    "@types/node": "^12.12.7",
+    "typescript": "^3.7.2"
   }
 }
