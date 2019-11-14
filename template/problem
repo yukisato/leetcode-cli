@@ -1,0 +1,8 @@
+export default function PROBLEM_FUNCTION_NAME(
+    nums: number[],
+    target: number
+): [number, number] {
+
+    // write some code here
+
+}
