@@ -1,5 +1,9 @@
+#!/usr/bin/env node
+
 import * as fs from "fs";
 import renderTemplate, { TemplateParam } from "./renderTemplate";
+
+const [, , ...args] = process.argv;
 
 enum Difficulty {
   Easy = "Easy",
@@ -18,13 +22,12 @@ const TEMPLATE_PATH_TEST = TEMPLATE_PATH_PROBLEM + "_test";
 const init = () => {
   console.log(`Initializing...\n`);
 
-  const id = ("000" + process.argv[2].split(".")[0]).slice(-4);
-  const originalTitle = process.argv.slice(3).join(" ");
+  const id = ("000" + args[0].split(".")[0]).slice(-4);
+  const originalTitle = args.slice(1).join(" ");;
 
   // Two Sum => TwoSum
-  const styledTitle = process.argv
-    .map((w: string, i: number) => {
-      if (i < 3) return "";
+  const styledTitle = args
+    .map((w: string) => {
       w = w.trim();
       return w === "" ? "" : firstToUpper(w);
     })
@@ -52,7 +55,7 @@ const init = () => {
   console.log(`\nInit #${id} successed!\n`);
 };
 
-const firstToUpper = (str: string) => str[0].toUpperCase() + str.slice(1);
-const firstToLower = (str: string) => str[0].toLowerCase() + str.slice(1);
+export const firstToUpper = (str: string) => str[0].toUpperCase() + str.slice(1);
+export const firstToLower = (str: string) => str[0].toLowerCase() + str.slice(1);
 
 init();

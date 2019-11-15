@@ -4,7 +4,7 @@
   "description": "LeetCode initializer for coding enthusiasts",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "tsc"
   },
   "repository": {
@@ -30,7 +30,10 @@
   },
   "devDependencies": {
     "@types/cheerio": "^0.22.14",
+    "@types/jest": "^24.0.23",
     "@types/node": "^12.12.7",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
     "typescript": "^3.7.2"
   }
 }

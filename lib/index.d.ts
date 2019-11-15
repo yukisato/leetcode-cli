@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 declare enum Difficulty {
     Easy = "Easy",
     Medium = "Medium",
