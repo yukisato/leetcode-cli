@@ -37,7 +37,8 @@ const run = () => {
     PROBLEM_TEST_TITLE: `${id}. ${originalTitle}`
   };
 
-  const exportPath = `${__dirname}/${id}.${styledTitle}`;
+  const exportPath = process.cwd() + `/${id}.${styledTitle}`;
+
   if (!fs.existsSync(exportPath)) {
     fs.mkdirSync(exportPath);
     console.log(`Directory ${exportPath} was created.`);
