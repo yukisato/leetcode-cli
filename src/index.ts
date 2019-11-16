@@ -3,8 +3,6 @@
 import * as fs from "fs";
 import renderTemplate, { TemplateParam } from "./renderTemplate";
 
-const [, , ...args] = process.argv;
-
 enum Difficulty {
   Easy = "Easy",
   Medium = "Medium",
@@ -19,15 +17,16 @@ export interface LeetCodeProblem {
 const TEMPLATE_PATH_PROBLEM = __dirname + '/template/problem';
 const TEMPLATE_PATH_TEST = TEMPLATE_PATH_PROBLEM + "_test";
 
-const init = () => {
+const run = () => {
   console.log(`Initializing...\n`);
 
-  const id = ("000" + args[0].split(".")[0]).slice(-4);
-  const originalTitle = args.slice(1).join(" ");;
+  const id = ("000" + process.argv[2].split(".")[0]).slice(-4);
+  const originalTitle = process.argv.slice(3).join(" ");
 
   // Two Sum => TwoSum
-  const styledTitle = args
-    .map((w: string) => {
+  const styledTitle = process.argv
+    .map((w: string, i: number) => {
+      if (i < 3) return "";
       w = w.trim();
       return w === "" ? "" : firstToUpper(w);
     })
@@ -58,4 +57,4 @@ const init = () => {
 export const firstToUpper = (str: string) => str[0].toUpperCase() + str.slice(1);
 export const firstToLower = (str: string) => str[0].toLowerCase() + str.slice(1);
 
-init();
+run();

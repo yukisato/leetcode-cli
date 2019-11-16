@@ -10,4 +10,6 @@ export interface LeetCodeProblem {
     acceptance?: number;
     difficulty?: Difficulty;
 }
+export declare const firstToUpper: (str: string) => string;
+export declare const firstToLower: (str: string) => string;
 export {};
