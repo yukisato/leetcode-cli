@@ -1,9 +1,8 @@
 export default function PROBLEM_FUNCTION_NAME(
-  str: string,
+  nums: number[],
   num: number
-): boolean {
+): number {
+  let result = 0;
 
-  // write some code here
-
-  return false;
+  return result;
 }
