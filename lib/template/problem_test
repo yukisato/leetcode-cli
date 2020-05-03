@@ -1,8 +1,13 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
 import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 import PROBLEM_FUNCTION_NAME from "./PROBLEM_FUNCTION_NAME.ts";
 
-test("PROBLEM_TEST_TITLE", () => {
-  const testValue = "";
-  assertEquals(PROBLEM_FUNCTION_NAME(testValue, 777), true);
+Deno.test("PROBLEM_TEST_TITLE", () => {
+  type test = [number, number];
+  const tests: test[] = [
+    [1234, 5678],
+  ];
+
+  for (const [arg, want] of tests) {
+    assertEquals(PROBLEM_FUNCTION_NAME(arg), want);
+  }
 });
