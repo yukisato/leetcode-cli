@@ -11,6 +11,6 @@ Deno.test("PROBLEM_TEST_TITLE", () => {
   ];
 
   for (const [args, want] of tests) {
-    assertEquals(PROBLEM_FUNCTION_NAME(args...), want);
+    assertEquals(PROBLEM_FUNCTION_NAME(...args), want);
   }
 });
